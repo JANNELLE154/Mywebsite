@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>User Registration</title>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <h3>Register new account</h3>
+        <form onsubmit="return validatePasswords(this);">
+    Username:
+    <br/>
+    <input type="text" />
+    <br/>
+    Password:
+    <br/>
+    <input type="password" name="password"/>
+    <br/>
+    Confirm:
+    <br/>
+    <input type="password" name="confirm"/>
+    <br/>
+    <input type="submit" name="register" value="Register">
+<script>
+    function validatePasswords(form) {
+        if (form.password.value !== form.confirm.value) {
+            alert("Passwords do not match");
+            return false;
+        }
+        return true;
+    }
+ 
+</script>
+
+</html>
